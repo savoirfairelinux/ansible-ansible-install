@@ -1,0 +1,14 @@
+- name: Ensure that our venv folder exists
+  file:
+    path: "{{ ansible_install_virtualenv_path }}"
+    state: directory
+- name: Create our requirements file for this virtualenv
+  copy:
+    content: |
+      setuptools>=18.0
+      ansible{{ ansible_install_versionspec }}
+    dest: "{{ ansible_install_virtualenv_path }}/requirements.txt"
+- name: installs ansible in a virtualenv
+  pip:
+    requirements: "{{ ansible_install_virtualenv_path }}/requirements.txt"
+    virtualenv: "{{ ansible_install_virtualenv_path }}"

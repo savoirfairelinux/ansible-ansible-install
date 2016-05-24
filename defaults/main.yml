@@ -1,0 +1,6 @@
+# Path to the virtualenv to put our ansible install in
+ansible_install_virtualenv_path: "/root/ansibleenv"
+# Pip version specs to describe the ansible version we want to install
+ansible_install_versionspec: ">=2.0"
+# User to install our virtualenv as. optional
+ansible_install_user: ''
