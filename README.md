@@ -14,6 +14,11 @@ one: installing ansible with pip in an isolated virtualenv.
 
 Before doing that, we make sure that the system has all the system packages we need.
 
+You'll see that we explicitly install setuptools in our `pip` call. That's because on debian
+jessie, the system version of setuptools is too old to properly install `cryptography`, one of
+ansible's dependency. That's why we have to do this whole dance. Otherwise, we could simply
+pip-install ansible globally and call it a day.
+
 ## Example
 
 ```
