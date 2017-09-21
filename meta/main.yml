@@ -1,0 +1,7 @@
+---
+dependencies: []
+
+galaxy_info:
+  author: "Savoir-faire Linux, Inc."
+  description: "Installs ansible on the target host, possibly in a virtualenv"
+  min_ansible_version: 2.2
